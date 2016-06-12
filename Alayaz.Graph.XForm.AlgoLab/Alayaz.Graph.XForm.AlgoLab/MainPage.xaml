@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:Alayaz.Graph.XForm.AlgoLab;assembly=Alayaz.Graph.XForm.AlgoLab"
+             x:Class="Alayaz.Graph.XForm.AlgoLab.MainPage">
+  <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
+ <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 40, 20, 20"
+                    Android="20, 20, 20, 20"
+                    WinPhone="20, 20, 20, 20" />
+     </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="15">
+          <Label Text="输入电话号码:" />
+          
+            <!--
+            <Entry x:Name="phoneNumberText" Text="" />-->
+            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+            <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+          <ScrollView>
+            <StackLayout Padding="6, 0">
+              <local:ColorView ColorName="Aqua" />
+              <local:ColorView ColorName="Black" />
+              <local:ColorView ColorName="Blue" />
+              <local:ColorView ColorName="Fuchsia" />
+              <local:ColorView ColorName="Gray" />
+              <local:ColorView ColorName="Green" />
+              <local:ColorView ColorName="Lime" />
+              <local:ColorView ColorName="Maroon" />
+              <local:ColorView ColorName="Navy" />
+              <local:ColorView ColorName="Olive" />
+              <local:ColorView ColorName="Purple" />
+              <local:ColorView ColorName="Pink" />
+              <local:ColorView ColorName="Red" />
+              <local:ColorView ColorName="Silver" />
+              <local:ColorView ColorName="Teal" />
+              <local:ColorView ColorName="White" />
+              <local:ColorView ColorName="Yellow" />
+            </StackLayout>
+          </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
