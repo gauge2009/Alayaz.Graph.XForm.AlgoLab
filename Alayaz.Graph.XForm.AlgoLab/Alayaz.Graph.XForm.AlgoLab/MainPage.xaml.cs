@@ -71,15 +71,33 @@ namespace Alayaz.Graph.XForm.AlgoLab
             //另见C:\T2_16\Graph\Xamarin\src\Charles_Petzold\Libraries\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit
 
 
+            ///C13  bmp 与 尺寸设定
+            //   <Image Source="{local:ImageResource Alayaz.Graph.XForm.AlgoLab.Images.Sculpture_320x240.jpg}" >
+            ///C13  工具栏
+            //    ToolbarDemo 见 C:\T2_16\Graph\Xamarin\src\Charles_Petzold\Chapter13\ToolbarDemo\ToolbarDemo.sln
+            ///C13  ImageButton
+            //    ToolbarDemo 见 C:\T2_16\Graph\Xamarin\src\Charles_Petzold\Chapter13\ToolbarDemo\ToolbarDemo.sln
+
+
+
+
+            ///C14  布局七剑：
+            ///AbsoluteLayout  &&  overlaps遮罩层
+            //C:\T2_16\Graph\Xamarin\src\Charles_Petzold\Chapter14\SimpleOverlay\SimpleOverlay.sln
+            //  <ContentView x:Name="overlay" 
+            ///BoxView实现液晶时钟：
+            //C:\T2_16\Graph\Xamarin\src\Charles_Petzold\Chapter14\DotMatrixClock\DotMatrixClock.sln
+
+
+
+            ///C15  交互控件
+            /// C:\T2_16\Graph\Xamarin\src\Charles_Petzold\Chapter15\TextFade\TextFade.sln
 
 
 
 
 
-
-
-
-
+            ///Alayaz.Graph.XForm.AlgoLab.UWP
 
 
 
@@ -99,6 +117,42 @@ namespace Alayaz.Graph.XForm.AlgoLab
 
 
         }
+
+        void On_ButtonClicked(object sender, EventArgs args)
+        {
+            // Show overlay with ProgressBar.
+            overlay.IsVisible = true;
+
+            TimeSpan duration = TimeSpan.FromSeconds(5);
+            DateTime startTime = DateTime.Now;
+
+            // Start timer.
+            Device.StartTimer(TimeSpan.FromSeconds(0.1), () =>
+            {
+                double progress = (DateTime.Now - startTime).TotalMilliseconds /
+                                  duration.TotalMilliseconds;
+                progressBar.Progress = progress;
+                bool continueTimer = progress < 1;
+
+                if (!continueTimer)
+                {
+                    // Hide overlay.
+                    overlay.IsVisible = false;
+                }
+                return continueTimer;
+            });
+        }
+
+
+
+        void OnImageSizeChanged(object sender, EventArgs args)
+        {
+            Image image = (Image)sender;
+            label.Text = String.Format("Rendered size = {0:F0} x {1:F0}",
+                                       image.Width, image.Height);
+        }
+
+
         private void XamlDemo()
         {
 
@@ -163,7 +217,14 @@ namespace Alayaz.Graph.XForm.AlgoLab
             /*********************************************
              *********************************************
              *********************************************/
-             (Content as StackLayout).Children.Insert(1, mainStack);
+            //AbsoluteLayout al = Content as AbsoluteLayout;
+            //StackLayout sl = al.Children.First() as StackLayout;
+             StackLayout sl = Content as StackLayout;
+            ScrollView sv = sl.Children.First() as ScrollView;
+            //StackLayout sl = (Content as ScrollView).Content as StackLayout;
+            StackLayout sl2 = sv.Content as StackLayout;
+            sl2.Children.Insert(1, mainStack);
+            //(Content as StackLayout).Children.Insert(1, mainStack);
             /*********************************************
              *********************************************
              *********************************************/

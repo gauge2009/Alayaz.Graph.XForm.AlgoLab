@@ -4,45 +4,138 @@
                xmlns:local="clr-namespace:Alayaz.Graph.XForm.AlgoLab;assembly=Alayaz.Graph.XForm.AlgoLab"
              x:Class="Alayaz.Graph.XForm.AlgoLab.MainPage">
   <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
- <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
-                    iOS="20, 40, 20, 20"
-                    Android="20, 20, 20, 20"
-                    WinPhone="20, 20, 20, 20" />
-     </ContentPage.Padding>
-    <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand"
-                     HorizontalOptions="FillAndExpand"
-                     Orientation="Vertical"
-                     Spacing="15">
-          <Label Text="输入电话号码:" />
-          
-            <!--
-            <Entry x:Name="phoneNumberText" Text="" />-->
-            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
-            <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
-          <ScrollView>
-            <StackLayout Padding="6, 0">
-              <local:ColorView ColorName="Aqua" />
-              <local:ColorView ColorName="Black" />
-              <local:ColorView ColorName="Blue" />
-              <local:ColorView ColorName="Fuchsia" />
-              <local:ColorView ColorName="Gray" />
-              <local:ColorView ColorName="Green" />
-              <local:ColorView ColorName="Lime" />
-              <local:ColorView ColorName="Maroon" />
-              <local:ColorView ColorName="Navy" />
-              <local:ColorView ColorName="Olive" />
-              <local:ColorView ColorName="Purple" />
-              <local:ColorView ColorName="Pink" />
-              <local:ColorView ColorName="Red" />
-              <local:ColorView ColorName="Silver" />
-              <local:ColorView ColorName="Teal" />
-              <local:ColorView ColorName="White" />
-              <local:ColorView ColorName="Yellow" />
-            </StackLayout>
-          </ScrollView>
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <!--<AbsoluteLayout  >-->
+      <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="15">
 
+      <ScrollView   >
+        <StackLayout x:Name="sl2" VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="15">
+          <StackLayout.Resources>
+            <ResourceDictionary>
+              <Style TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+              </Style>
+            </ResourceDictionary>
+          </StackLayout.Resources>
+          <Label Text="输入电话号码:" />
+
+          <!--
+            <Entry x:Name="phoneNumberText" Text="" />-->
+          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+          <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+
+          <StackLayout Padding="6, 0">
+            <Label Text="320 x 240 Pixel Bitmap"
+                   FontSize="Medium"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" />
+            <!--原始尺寸》 Ga : 107 DIU ~ 320 PX  ; I: 160 DIU ~ 320 PX ; WP: 320 DIU  : 320x240 ;无背景色-->
+            <!--<Image Source="{local:ImageResource Alayaz.Graph.XForm.AlgoLab.Images.Sculpture_320x240.jpg}"
+                 HorizontalOptions="Center"
+                 BackgroundColor="Aqua"
+                 SizeChanged="OnImageSizeChanged" />-->
+            <!--限宽（不足）》 Ga : 100 DIU ~ 320 PX  ; I: 100 DIU ~ 320 PX;  WP: 100 DIU  : 320x240 ;无背景色-->
+            <!--<Image Source="{local:ImageResource Alayaz.Graph.XForm.AlgoLab.Images.Sculpture_320x240.jpg}"
+                 WidthRequest="100"
+                 HorizontalOptions="Center"
+                 BackgroundColor="Aqua"
+                 SizeChanged="OnImageSizeChanged" />-->
+            <!--限宽（有余）》 Ga : 360 DIU ~ 320 PX  ; I: 375 DIU ~ 320 PX;  WP: 341 DIU  : 320x240 ;均有背景色 -->
+            <!--<Image Source="{local:ImageResource Alayaz.Graph.XForm.AlgoLab.Images.Sculpture_320x240.jpg}"
+                 WidthRequest="1000"
+                 HorizontalOptions="Center"
+                 BackgroundColor="Aqua"
+                 SizeChanged="OnImageSizeChanged" />-->
+            <!--限高（不足）》 Ga : 308x250 DIU ~ 320x240 PX  ; I: 375 x  250 DIU ~ 320x240 PX;  WP: 341 x 250 DIU : 320x240 ;均有背景色 -->
+            <!--<Image Source="{local:ImageResource Alayaz.Graph.XForm.AlgoLab.Images.Sculpture_320x240.jpg}"
+                 HeightRequest="250"
+                 BackgroundColor="Aqua"
+                 SizeChanged="OnImageSizeChanged" />-->
+            <!--限高（有余）》 Ga : 308 x 400 DIU ~ 320x240 PX  ; I: 375 x  400 DIU ~ 320x240 PX;  WP: 341 x 400 DIU : 320x240 ;均有背景色 -->
+            <!--<Image Source="{local:ImageResource Alayaz.Graph.XForm.AlgoLab.Images.Sculpture_320x240.jpg}"
+                 HeightRequest="400"
+                 BackgroundColor="Aqua"
+                 SizeChanged="OnImageSizeChanged" />-->
+            <!--双限 》 Ga : 308 x 400 DIU ~ 320x240 PX  ; I: 375 x  400 DIU ~ 320x240 PX;  WP: 341 x 400 DIU : 320x240 ;无背景色 -->
+            <Image Source="{local:ImageResource Alayaz.Graph.XForm.AlgoLab.Images.Sculpture_320x240.jpg}"
+                   WidthRequest="320"
+                   HeightRequest="240"
+                   HorizontalOptions="Center"
+                   BackgroundColor="Aqua"
+                   SizeChanged="OnImageSizeChanged" />
+            <Button Text="点赞"  Clicked="On_ButtonClicked" >
+              <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            iOS="ic_action_good.png"
+                            Android="ic_action_good.png"
+                            WinPhone="Images/ic_action_good.png" />
+              </Button.Image>
+            </Button>
+            
+ 
+
+
+            <Button Text="吐槽">
+              <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            iOS="ic_action_bad.png"
+                            Android="ic_action_bad.png"
+                            WinPhone="Images/ic_action_bad.png" />
+              </Button.Image>
+            </Button>
+            <Label x:Name="label"
+                   FontSize="Medium"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" />
+
+            <local:ColorView ColorName="Aqua" />
+            <local:ColorView ColorName="Black" />
+            <local:ColorView ColorName="Blue" />
+            <local:ColorView ColorName="Fuchsia" />
+            <local:ColorView ColorName="Gray" />
+            <local:ColorView ColorName="Green" />
+            <local:ColorView ColorName="Lime" />
+            <local:ColorView ColorName="Maroon" />
+            <local:ColorView ColorName="Navy" />
+            <local:ColorView ColorName="Olive" />
+            <local:ColorView ColorName="Purple" />
+            <local:ColorView ColorName="Pink" />
+            <local:ColorView ColorName="Red" />
+            <local:ColorView ColorName="Silver" />
+            <local:ColorView ColorName="Teal" />
+            <local:ColorView ColorName="White" />
+            <local:ColorView ColorName="Yellow" />
+          </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+      </ScrollView>
+ <!-- Overlay -->
+        <ContentView x:Name="overlay" 
+                     
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                     AbsoluteLayout.LayoutFlags="All"
+                     IsVisible="False"
+                     BackgroundColor="#C0808080"
+                     Padding="10, 0">
+
+            <ProgressBar x:Name="progressBar"
+                         VerticalOptions="Center" />
+            
+        </ContentView>
+      </StackLayout>
+    
+     
+    <!--</AbsoluteLayout>-->
+  </ContentPage.Content>
 </ContentPage>
