@@ -103,7 +103,7 @@ namespace Alayaz.Graph.XForm.AlgoLab
 
             /// Xamarin.FormsBook.Toolkit  见C:\T2_16\Graph\Xamarin\src\Charles_Petzold\Libraries\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit
             //较具有参考价值的架构元件
-
+            //C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\SwitchText\SwitchText.sln
 
 
 
@@ -132,9 +132,15 @@ namespace Alayaz.Graph.XForm.AlgoLab
             // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\BindingModes\BindingModes.sln
             // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\ReverseBinding\ReverseBinding.sln
 
-            ///
+            ///数据绑定中的类型转化
+            ///出栈
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\ShowViewValues\ShowViewValues.sln
+            ///入栈
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\ButtonEnabler\ButtonEnabler.sln
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\SwitchText\SwitchText.sln
 
-
+            ///自定义控件视图的绑定
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\NewCheckBoxDemo\NewCheckBoxDemo.sln
 
 
 
