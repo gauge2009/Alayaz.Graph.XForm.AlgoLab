@@ -103,6 +103,48 @@ namespace Alayaz.Graph.XForm.AlgoLab
 
             /// Xamarin.FormsBook.Toolkit  见C:\T2_16\Graph\Xamarin\src\Charles_Petzold\Libraries\Xamarin.FormsBook.Toolkit\Xamarin.FormsBook.Toolkit
             //较具有参考价值的架构元件
+
+
+
+
+            /// 文本输入控件
+            ///C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C14-Entry Editor
+
+            /// 日期、时间选择器
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C15-Entry Editor\DaysBetweenDates\DaysBetweenDates.sln
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C15-Entry Editor\SetTimer\SetTimer.sln
+
+
+
+
+
+            ///Data Binding
+            ///基于BdCtx的自动绑定模式
+            //C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\OpacityBindingXaml\OpacityBindingXaml.sln
+
+            ///手动绑定模式
+            //C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\BindingSourceXaml\BindingSourceXaml.sln
+
+            ///BdCtx在可视树中的传播 及WebView
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16 - Data Binding\WebViewDemo\WebViewDemo.sln
+
+            ///绑定模式
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\BindingModes\BindingModes.sln
+            // C:\T2_16\Graph\Xamarin\src\Charles_Petzold\C16-Data Binding\ReverseBinding\ReverseBinding.sln
+
+            ///
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void xxx()
